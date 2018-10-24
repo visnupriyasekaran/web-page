@@ -1,0 +1,127 @@
+---<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//Header of the page
+	var headerElement = document.createElement("header");
+    headerElement.setAttribute("id", "head");
+    
+    var head = document.createElement("h1");
+    var textNodeh3=document.createTextNode("MY PERSONAL INFORMATION");
+    head.appendChild(textNodeh3);
+    headerElement.appendChild(head);
+	//Creteing a ahref link in the header element
+    var anchor = document.createElement("a");
+    var link=document.createTextNode("myhcl");
+    anchor.appendChild(link);
+    anchor.href="https://www.myhcl.com";
+    headerElement.appendChild(anchor);
+    document.body.appendChild(headerElement);
+
+   
+    //Applying style to the header
+    document.getElementById("head").style.border="thick solid #0000FF";
+    document.getElementById("head").style.height="100px";
+    document.getElementById("head").style.padding="16px";
+
+
+
+
+     //Creating a section 
+     var sec=document.createElement("section");
+     sec.setAttribute("id","mySection");
+     document.body.appendChild(sec);
+      
+    //Creating a article element
+    var arc=document.createElement("article");
+    arc.setAttribute("id","myArticle");
+    document.body.appendChild(arc);
+
+    document.getElementById("mySection").appendChild(arc);
+    
+
+    //Aside of the page
+    var asideElement=document.createElement("aside");
+    asideElement.setAttribute("id","asideinfo");
+    document.body.appendChild(asideElement);
+
+    //Creating a Name Button
+    var nameButton=document.createElement("button");
+    nameButton.setAttribute("id","name");
+    nameButton.setAttribute("onclick","displayName()");
+    var textNodeNameb=document.createTextNode("NAME");
+    nameButton.appendChild(textNodeNameb);
+
+    //Creating a Sap Id Button
+    var sapIdButton=document.createElement("button");
+    sapIdButton.setAttribute("id","sapid");
+    sapIdButton.setAttribute("onclick","displaySapId()");
+    var textNodeSapIdb=document.createTextNode("SAPID");
+    sapIdButton.appendChild(textNodeSapIdb);
+
+    //Creating a Age Button
+    var ageButton=document.createElement("button");
+    ageButton.setAttribute("id","age");
+    ageButton.setAttribute("onclick","displayAge()");
+    var textNodeAgeb=document.createTextNode("AGE");
+    ageButton.appendChild(textNodeAgeb);
+
+
+    document.getElementById("asideinfo").appendChild(nameButton);
+    document.getElementById("asideinfo").appendChild(sapIdButton);
+    document.getElementById("asideinfo").appendChild(ageButton);
+
+
+
+    //Applying style to the aside
+    document.getElementById("asideinfo").style.border="thick solid #0000FF";
+    document.getElementById("asideinfo").style.height="600px";
+    document.getElementById("asideinfo").style.width="100px";
+ 
+    
+
+
+    //Footer of the page
+    var footerElement = document.createElement("footer");
+    footerElement.setAttribute("id", "foot");
+    document.body.appendChild(footerElement);
+
+    var headingElement3 = document.createElement("h1"); 
+    var textNodef = document.createTextNode("FOOTER");
+    headingElement3.appendChild(textNodef);
+
+    document.getElementById("foot").appendChild(headingElement3	);
+
+    //Applying styles to the footer
+    document.getElementById("foot").style.border="thick solid #0000FF";
+    document.getElementById("foot").style.height="100px";
+    
+   
+    //Display all the information when the button is clicked
+    
+    function displayName()
+    {
+    	var namePro = prompt("Please enter your name");
+    	if(namePro!=null)
+    		{
+    			document.getElementById("name").innerText=namePro;
+    		}
+    	
+    }
+    
+    function displaySapId()
+    {
+    	var sapPro = prompt("Please enter your sap id");
+    	var y=document.getElementById("sapid").innerText=sapPro;
+    }
+    
+    function displayAge()
+    {
+    	var agePro = prompt("Please enter your age");
+    	var z=document.getElementById("age").innerText=agePro;
+    }
+
+</script>
+
+</body>
+</html>
